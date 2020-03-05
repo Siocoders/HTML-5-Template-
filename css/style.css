@@ -1,0 +1,428 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: siocoders
+  Support: siocoders@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/*=================================================================
+                        CSS Index
+===================================================================
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/*====================================================================
+ 1. Theme default css 
+======================================================================*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.btn {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+.btn {
+	background-color: #00091D;
+	color: white;
+	font-size: 20px;
+	padding: 11px 40px;
+	border-radius: 75px;
+}
+.btn:hover {
+	color: crimson;
+	box-shadow: #00091D 0px 6px 4px;
+}
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+.title {
+	color: crimson;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	line-height: 50px;
+}
+a {
+	color: #daf1ff;
+	outline: medium none;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	color: #313131;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #7e7e7e;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #011d97;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #011d97;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #011d97;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #011d97;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #011d97;
+	font-size: 14px;
+	opacity: 1;
+}
+/*====================================================================
+2. Header 
+======================================================================*/
+.header-area {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.logo a img {
+	padding: 15px;
+}
+.main-menu nav ul li {
+	display: inline-block;
+	position: relative;
+}
+.main-menu nav ul li a {
+	padding: 30px 20px;
+	display: block;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.main-menu nav ul li a:hover {
+	text-decoration: none;
+}
+.main-menu nav ul li ul.submenu {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: rgb(0, 2, 8);
+	width: 250px;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+	transform-origin: top center;
+	transform: scaleY(0);
+	z-index: 9;
+}
+.main-menu nav ul li:hover ul.submenu {
+	opacity: 1;
+	visibility: visible;
+	transform: scaleY(1);
+}
+.main-menu nav ul li ul.submenu li {
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+
+.main-menu nav ul li ul.submenu li:last-child {
+	border: none;
+}
+.main-menu nav ul li ul.submenu li a{
+	padding: 0;
+}
+.main-menu nav ul li ul.submenu li:hover {
+	background-color: #1A2234;
+}
+.mean-container .mean-nav ul li a {
+
+	border-top: none;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.mean-container .mean-bar {
+	background: none;
+}
+.tro-mobile-menu.mean-container {
+	margin-top: -50px;
+}
+.mean-container .mean-nav {
+	margin-top: 61px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.mean-container .mean-nav {
+	background: #00091D;
+}
+.mean-container .mean-nav ul li a.mean-expand {
+	margin-top: 7px;
+	height: 14px;
+	padding: 11px !important;
+	top: -9px;
+	font-size: 14px!important;
+}
+.mean-container .mean-nav ul li a {
+	margin: 3px;
+}
+.mean-container .mean-nav ul li a {
+	margin: 0;
+}
+
+/*====================================================================
+3. Slider
+======================================================================*/
+.text-area h1 {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: whitesmoke;
+}
+.slider-area {
+	min-height: 700px;
+	background-color: #000000;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.is-visible {
+	color: #15c24f;
+}
+
+/*====================================================================
+4. About
+======================================================================*/
+.about-area {
+	min-height: 800px;
+	max-width: 100%;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.about-text-area h1 {
+	color: honeydew;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 6px;
+}
+.about-text-area span {
+	color: honeydew;
+	line-height: 40px;
+	font-size: 22px;
+}
+.about-text-area p {
+	color: rgba(255, 255, 255, 0.883);
+	font-size: 16px;
+	line-height: 30px;
+	padding: 30px 0px ;
+}
+.icon ul li a i{
+	font-size: 30px;
+	color: rgb(6, 39, 109);
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+.icon ul li a i:hover{
+	color: rgb(255, 255, 255);
+}
+.icon ul li{
+	float: left;
+	padding: 50px 20px;
+}
+/*====================================================================
+4. Portfolio
+======================================================================*/
+.portfolio-filter ul li {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: inline-block;
+	border: 1px solid #313131;
+	padding: 20px;
+	margin: 30px 2px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+.portfolio-filter ul li.active {
+	background-color: #444;
+}
+.portfolio-filter ul li:hover {
+	background-color: #444;
+}
+.grid {
+	width: 100%;
+}
+.grid img{
+	width: 100%;
+}
+.element-item {
+	margin-bottom: 25px;
+}
+.element-item a {  
+	position: relative;
+	display: block;
+}
+.element-item a::after {  
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color:rgba(0,0,0,.5);
+	left: 0;
+	top: 0;
+	position: absolute;
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+	transform: scaleY(0);
+	opacity: 0;
+}
+.element-item:hover a::after {
+	opacity: 1;
+	transform: scaleY(1);
+}
+.portfolio-filter {
+	margin: 30px auto 30px;
+}
+.portfolio-area {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+/*====================================================================
+5. Counter up
+======================================================================*/
+.counter {
+	font-size: 60px;
+	font-weight: 600;
+	color: #F11E6D;
+}
+.heading-title {
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+.our-clien {
+	background-color: rgba(128, 128, 128, 0.10);
+	cursor: pointer;
+}
+.counter-area {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+.our-clien i {
+	font-size: 50px;
+	color: white;
+}
